@@ -27,5 +27,5 @@ services:
         ipv4_address: 10.7.5.4
 networks:
   testPI:
-    external: true
+    #external: true
     name: testDNS

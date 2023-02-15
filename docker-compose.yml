@@ -27,5 +27,12 @@ services:
         ipv4_address: 10.7.5.4
 networks:
   testPI:
-    #external: true
-    name: testDNS
+    name: testPI
+    driver: macvlan
+    driver_opts:
+      parent:  enp0s25
+    ipam:
+      config:
+        - subnet: 10.7.5.0/24
+        - gateway: '10.7.5.254'
+        

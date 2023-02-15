@@ -23,5 +23,9 @@ services:
       - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
     restart: unless-stopped
     networks:
-      testDNS:
+       testDNS:
         ipv4_address: 10.7.5.4
+networks:
+  testDNS:
+    name: testDNS
+    external: true
